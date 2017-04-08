@@ -1,0 +1,38 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  background: #3FAF82;
+  color: #fff;
+  border: 1px solid black; }
+
+.container-inner {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  height: 200px;
+  width: 200px;
+  transform: translate(-50%, -50%);
+  background: blue;
+  border-radius: 50%; }
+
+.sun {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  height: 40px;
+  width: 40px;
+  background: yellow;
+  animation: sun-go-around 0.7s cubic-bezier(0.55, 0.55, 0.675, 0.19) 2s infinite; }
+
+@keyframes sun-go-around {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg); }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(360deg); } }
