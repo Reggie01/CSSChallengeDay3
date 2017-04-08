@@ -8,7 +8,7 @@
   margin-left: -200px;
   border-radius: 2px;
   box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
-  background: #3FAF82;
+  background: #211f27;
   color: #fff;
   border: 1px solid black; }
 
@@ -19,8 +19,9 @@
   height: 200px;
   width: 200px;
   transform: translate(-50%, -50%);
-  background: blue;
-  border-radius: 50%; }
+  background: #b7e4e3;
+  border-radius: 50%;
+  overflow: hidden; }
 
 .sun {
   position: absolute;
@@ -29,10 +30,44 @@
   height: 40px;
   width: 40px;
   background: yellow;
-  animation: sun-go-around 0.7s cubic-bezier(0.55, 0.55, 0.675, 0.19) 2s infinite; }
+  transform-origin: 175% 300%;
+  border-radius: 50%;
+  animation: sun-go-around 3s infinite linear; }
+
+.triangle-1 {
+  position: absolute;
+  top: 50%;
+  left: 34%;
+  width: 0;
+  height: 0;
+  margin-left: -25px;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 50px solid #fff; }
+
+.triangle-2 {
+  position: absolute;
+  top: 50%;
+  left: 53%;
+  width: 0;
+  height: 0;
+  margin-left: -25;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 50px solid black;
+  -ms-transform: skewX(57deg);
+  -webkit-transform: skewX(57deg);
+  transform: skewX(57deg); }
+
+.sand {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  width: 200px;
+  background: #cfcc75; }
 
 @keyframes sun-go-around {
-  0% {
-    transform: translate3d(0, 0, 0) rotate(0deg); }
-  100% {
-    transform: translate3d(0, 0, 0) rotate(360deg); } }
+  to {
+    opacity: 0;
+    transform: rotate(1turn); } }
