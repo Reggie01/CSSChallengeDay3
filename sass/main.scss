@@ -23,6 +23,7 @@
   background: #b7e4e3;
   border-radius: 50%;
   overflow: hidden;
+  animation: turn-to-night 6s infinite linear;
 }
 
 $easeInCubic: cubic-bezier(.55,.55,.675,.19);
@@ -36,7 +37,7 @@ $easeInCubic: cubic-bezier(.55,.55,.675,.19);
   background: yellow;
   transform-origin: 175% 300%;
   border-radius: 50%;
-  animation: sun-go-around 3s infinite linear;
+  animation: sun-go-around 6s infinite linear;
 }
 
 .triangle-1 {
@@ -48,8 +49,9 @@ $easeInCubic: cubic-bezier(.55,.55,.675,.19);
   margin-left: -25px;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  
   border-bottom: 50px solid #fff;
+  border-bottom-color: rgb(235,234,234);
+  animation: triangle-1-shade 6s infinite linear;
 }
 
 .triangle-2 {
@@ -61,11 +63,21 @@ $easeInCubic: cubic-bezier(.55,.55,.675,.19);
   margin-left: -25;
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
-  
   border-bottom: 50px solid black;
+  border-bottom-color: rgb( 202, 196, 190 );
   -ms-transform: skewX(57deg);
   -webkit-transform: skewX(57deg);
   transform: skewX(57deg);
+  animation: triangle-2-shade 6s infinite linear;
+}
+
+.shadow {
+  position: absolute;
+  bottom: 0;
+  left: 34%;
+  border-left: 75px solid black;
+  border-right: 75px solid black;
+  border-bottom-color: 75px solid transparent;
 }
 
 .sand {
@@ -81,5 +93,47 @@ $easeInCubic: cubic-bezier(.55,.55,.675,.19);
   to {
     opacity: 0;
     transform: rotate(1turn);
+  }
+}
+
+@keyframes turn-to-night {
+  0% {
+    opacity: 1;
+  }
+  
+  35% {
+    opacity: 1;
+  }
+  
+  40% {
+    opacity: 0;
+  }
+}
+
+@keyframes triangle-1-shade {
+  0% {
+    border-bottom-color: rgb(235,234,234);
+  }
+  
+  25% {
+    border-bottom-color: rgb( 202, 196, 190 );
+  }
+  
+  65% {
+    border-bottom-color: rgb(235,234,234);
+  }
+}
+
+@keyframes triangle-2-shade {
+  0% {
+    border-bottom-color: rgb( 202, 196, 190 );
+  }
+  
+  25% {
+    border-bottom-color: rgb(235,234,234);
+  }
+  
+  65% {
+    border-bottom-color: rgb( 202, 196, 190 );
   }
 }

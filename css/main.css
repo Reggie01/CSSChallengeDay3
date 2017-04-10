@@ -21,7 +21,8 @@
   transform: translate(-50%, -50%);
   background: #b7e4e3;
   border-radius: 50%;
-  overflow: hidden; }
+  overflow: hidden;
+  animation: turn-to-night 6s infinite linear; }
 
 .sun {
   position: absolute;
@@ -32,7 +33,7 @@
   background: yellow;
   transform-origin: 175% 300%;
   border-radius: 50%;
-  animation: sun-go-around 3s infinite linear; }
+  animation: sun-go-around 6s infinite linear; }
 
 .triangle-1 {
   position: absolute;
@@ -43,7 +44,9 @@
   margin-left: -25px;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-bottom: 50px solid #fff; }
+  border-bottom: 50px solid #fff;
+  border-bottom-color: #ebeaea;
+  animation: triangle-1-shade 6s infinite linear; }
 
 .triangle-2 {
   position: absolute;
@@ -55,9 +58,19 @@
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
   border-bottom: 50px solid black;
+  border-bottom-color: #cac4be;
   -ms-transform: skewX(57deg);
   -webkit-transform: skewX(57deg);
-  transform: skewX(57deg); }
+  transform: skewX(57deg);
+  animation: triangle-2-shade 6s infinite linear; }
+
+.shadow {
+  position: absolute;
+  bottom: 0;
+  left: 34%;
+  border-left: 75px solid black;
+  border-right: 75px solid black;
+  border-bottom-color: 75px solid transparent; }
 
 .sand {
   position: absolute;
@@ -71,3 +84,27 @@
   to {
     opacity: 0;
     transform: rotate(1turn); } }
+
+@keyframes turn-to-night {
+  0% {
+    opacity: 1; }
+  35% {
+    opacity: 1; }
+  40% {
+    opacity: 0; } }
+
+@keyframes triangle-1-shade {
+  0% {
+    border-bottom-color: #ebeaea; }
+  25% {
+    border-bottom-color: #cac4be; }
+  65% {
+    border-bottom-color: #ebeaea; } }
+
+@keyframes triangle-2-shade {
+  0% {
+    border-bottom-color: #cac4be; }
+  25% {
+    border-bottom-color: #ebeaea; }
+  65% {
+    border-bottom-color: #cac4be; } }
