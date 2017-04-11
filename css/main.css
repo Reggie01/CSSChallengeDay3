@@ -66,11 +66,13 @@
 
 .shadow {
   position: absolute;
+  z-index: 1;
   bottom: 0;
-  left: 34%;
-  border-left: 75px solid black;
-  border-right: 75px solid black;
-  border-bottom-color: 75px solid transparent; }
+  top: 75%;
+  left: 21%;
+  border-left: 99px solid transparent;
+  border-right: 52px solid transparent;
+  border-top: 32px solid black; }
 
 .sand {
   position: absolute;
